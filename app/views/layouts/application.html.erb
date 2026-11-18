@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for(:title) || "Bookers" %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+ 
+  <body>
+    <% if flash[:notice] %>
+      <p id="notice"><%= flash[:notice] %></p>
+    <% end %>
+
+    <main>
+      <%= yield %>
+    </main>
+  
+  </body>
+</html>
+
+        
+    
